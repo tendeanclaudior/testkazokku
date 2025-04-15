@@ -2,6 +2,7 @@
 import React, {useCallback} from 'react';
 import {
   Image,
+  Platform,
   SafeAreaView,
   ScrollView,
   StatusBar,
@@ -20,7 +21,20 @@ const Pages1 = ({navigation}: Pages1) => {
   const buttonPress = useCallback(
     (type: string) => {
       if (type === 'start') {
-        navigation.navigate('Pages2');
+        if (Platform.OS === 'android') {
+          const androidVersion = Platform.Version;
+
+          if (androidVersion >= 31) {
+            navigation.navigate('Pages2');
+          } else {
+            ToastAndroid.show(
+              'Minimal Android 12 untuk menggunakan aplikasi ini.',
+              ToastAndroid.SHORT,
+            );
+          }
+        } else {
+          navigation.navigate('Pages2');
+        }
       } else {
         ToastAndroid.show('This feature being developed.', ToastAndroid.SHORT);
       }
