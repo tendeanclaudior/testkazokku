@@ -2,8 +2,8 @@
 import React from 'react';
 import {StyleSheet, TouchableOpacity, View} from 'react-native';
 import {
-  ArrowsPointingInIcon,
   ViewfinderCircleIcon,
+  ArrowsPointingInIcon,
 } from 'react-native-heroicons/outline';
 
 const ButtonIcon = ({icon, onPress, disabled}: ButtonIcon) => {

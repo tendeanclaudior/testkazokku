@@ -22,7 +22,21 @@ declare interface ButtonIcon {
 declare interface Header {
   headerMain: boolean;
 }
+
 declare interface BalanceView {
   currency: string;
   daysView: boolean;
+}
+
+declare interface Card {
+  id: number;
+  style: object;
+}
+
+declare interface CardContainer {
+  id: number;
+  color: string;
+  priority: any;
+  firstPriority: any;
+  secondPriority: any;
 }
