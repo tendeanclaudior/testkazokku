@@ -44,3 +44,8 @@ declare interface CardContainer {
 declare interface TransactionView {
   data: any[];
 }
+
+declare interface BottomTabs {
+  state: any;
+  navigation: any;
+}

@@ -25,7 +25,7 @@ const Pages1 = ({navigation}: Pages1) => {
           const androidVersion = Platform.Version;
 
           if (androidVersion >= 31) {
-            navigation.navigate('Pages2');
+            navigation.navigate('MainApp');
           } else {
             ToastAndroid.show(
               'Minimal Android 12 untuk menggunakan aplikasi ini.',
