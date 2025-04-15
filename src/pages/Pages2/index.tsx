@@ -33,7 +33,7 @@ const Pages2 = () => {
           barStyle={'dark-content'}
         />
 
-        <Header headerMain={true} />
+        <Header headerMain={true} headerGlobal={false} />
 
         <ScrollView contentContainerStyle={styles.scrollContainer}>
           <View style={styles.container}>

@@ -3,7 +3,7 @@ import React, {memo} from 'react';
 import ButtonIcon from './ButtonIcon';
 import {Profile} from '../assets';
 
-const Header = ({headerMain}: Header) => {
+const Header = ({headerMain, headerGlobal, pressGlobal}: Header) => {
   return (
     <>
       {headerMain && (
@@ -28,6 +28,22 @@ const Header = ({headerMain}: Header) => {
               }
               disabled={false}
             />
+          </View>
+        </View>
+      )}
+
+      {headerGlobal && (
+        <View style={styles.headerGlobalBackground}>
+          <View style={styles.headerGlobalContainer}>
+            <ButtonIcon
+              icon={'chevronL'}
+              onPress={pressGlobal}
+              disabled={false}
+            />
+
+            <Text style={styles.headerGlobalTitle}>Statistics</Text>
+
+            <Image source={Profile} style={styles.headerMainProfile} />
           </View>
         </View>
       )}
@@ -65,6 +81,22 @@ const styles = StyleSheet.create({
     color: '#909398',
   },
   headerMainTitleName: {
+    fontSize: 18,
+    fontWeight: '600',
+    color: '#2D2D2D',
+  },
+  headerGlobalBackground: {
+    backgroundColor: '#FFFFFF',
+    width: '100%',
+    paddingHorizontal: 20,
+    paddingVertical: 15,
+  },
+  headerGlobalContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  headerGlobalTitle: {
     fontSize: 18,
     fontWeight: '600',
     color: '#2D2D2D',

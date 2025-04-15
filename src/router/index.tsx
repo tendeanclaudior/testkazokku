@@ -2,12 +2,11 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React from 'react';
 import {BottomTabs} from '../components';
-import {Pages1, Pages2} from '../pages';
+import {Pages1, Pages2, Pages3} from '../pages';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
-const Statistics = () => <></>;
 const EWallet = () => <></>;
 const Settings = () => <></>;
 
@@ -21,8 +20,8 @@ const MainApp = () => {
         options={{headerShown: false}}
       />
       <Tab.Screen
-        name="Statistics"
-        component={Statistics}
+        name="Pages3"
+        component={Pages3}
         options={{headerShown: false}}
       />
       <Tab.Screen

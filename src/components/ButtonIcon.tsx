@@ -4,6 +4,7 @@ import {StyleSheet, TouchableOpacity, View} from 'react-native';
 import {
   ViewfinderCircleIcon,
   ArrowsPointingInIcon,
+  ChevronLeftIcon,
 } from 'react-native-heroicons/outline';
 
 const ButtonIcon = ({icon, onPress, disabled}: ButtonIcon) => {
@@ -19,6 +20,12 @@ const ButtonIcon = ({icon, onPress, disabled}: ButtonIcon) => {
         return (
           <View style={styles.PView}>
             <ArrowsPointingInIcon size={30} color={'#2D2D2D'} />
+          </View>
+        );
+      case 'chevronL':
+        return (
+          <View style={styles.CLView}>
+            <ChevronLeftIcon size={30} color={'#2D2D2D'} />
           </View>
         );
 
@@ -50,6 +57,14 @@ const styles = StyleSheet.create({
   PView: {
     width: 50,
     height: 50,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  CLView: {
+    backgroundColor: '#EBF1F4',
+    width: 45,
+    height: 45,
+    borderRadius: 45,
     alignItems: 'center',
     justifyContent: 'center',
   },

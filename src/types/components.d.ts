@@ -21,6 +21,8 @@ declare interface ButtonIcon {
 
 declare interface Header {
   headerMain: boolean;
+  headerGlobal: boolean;
+  pressGlobal: () => void;
 }
 
 declare interface BalanceView {
