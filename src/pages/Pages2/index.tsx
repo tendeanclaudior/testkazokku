@@ -5,11 +5,18 @@ import {
   ScrollView,
   StatusBar,
   StyleSheet,
+  Text,
   View,
 } from 'react-native';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import {useSharedValue} from 'react-native-reanimated';
-import {BalanceView, CardContainer, Header} from '../../components';
+import {
+  BalanceView,
+  CardContainer,
+  Header,
+  TransactionView,
+} from '../../components';
+import {generateTransactions} from '../../utils';
 
 const {height} = Dimensions.get('window');
 
@@ -49,6 +56,12 @@ const Pages2 = () => {
               />
             </View>
           </View>
+
+          <View>
+            <Text style={styles.titleTransaction}>Transaction</Text>
+
+            <TransactionView data={generateTransactions(10)} />
+          </View>
         </ScrollView>
       </SafeAreaView>
     </GestureHandlerRootView>
@@ -76,5 +89,11 @@ const styles = StyleSheet.create({
     height: height * 0.3,
     alignItems: 'center',
     position: 'relative',
+  },
+  titleTransaction: {
+    fontSize: 25,
+    fontWeight: '800',
+    color: '#2D2D2D',
+    left: 20,
   },
 });

@@ -6,6 +6,7 @@ import Header from './Header';
 import BalanceView from './BalanceView';
 import Card from './Card';
 import CardContainer from './CardContainer';
+import TransactionView from './TransactionView';
 
 export {
   Gap,
@@ -16,4 +17,5 @@ export {
   BalanceView,
   Card,
   CardContainer,
+  TransactionView,
 };

@@ -40,3 +40,7 @@ declare interface CardContainer {
   firstPriority: any;
   secondPriority: any;
 }
+
+declare interface TransactionView {
+  data: any[];
+}
