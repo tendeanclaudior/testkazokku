@@ -18,3 +18,7 @@ declare interface ButtonIcon {
   onPress: () => void;
   disabled: boolean;
 }
+
+declare interface Header {
+  headerMain: boolean;
+}

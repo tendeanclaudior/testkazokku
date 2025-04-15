@@ -1,7 +1,10 @@
 /* eslint-disable react/no-unstable-nested-components */
 import React from 'react';
 import {StyleSheet, TouchableOpacity, View} from 'react-native';
-import {ViewfinderCircleIcon} from 'react-native-heroicons/outline';
+import {
+  ArrowsPointingInIcon,
+  ViewfinderCircleIcon,
+} from 'react-native-heroicons/outline';
 
 const ButtonIcon = ({icon, onPress, disabled}: ButtonIcon) => {
   const Icon = () => {
@@ -10,6 +13,12 @@ const ButtonIcon = ({icon, onPress, disabled}: ButtonIcon) => {
         return (
           <View style={styles.FView}>
             <ViewfinderCircleIcon size={30} color={'#2D2D2D'} />
+          </View>
+        );
+      case 'pointing':
+        return (
+          <View style={styles.PView}>
+            <ArrowsPointingInIcon size={30} color={'#2D2D2D'} />
           </View>
         );
 
@@ -37,5 +46,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderRadius: 10,
     elevation: 1,
+  },
+  PView: {
+    width: 50,
+    height: 50,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });

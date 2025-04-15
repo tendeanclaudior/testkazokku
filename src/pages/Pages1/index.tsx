@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import React from 'react';
+import React, {useCallback} from 'react';
 import {
   Image,
   SafeAreaView,
@@ -14,8 +14,19 @@ import {
 import {Icon1, Icon2, ImageGrafik} from '../../assets';
 import {Button, ButtonIcon, Gap, GradientText} from '../../components';
 
-const Pages1 = () => {
+const Pages1 = ({navigation}: Pages1) => {
   const {width, height} = useWindowDimensions();
+
+  const buttonPress = useCallback(
+    (type: string) => {
+      if (type === 'start') {
+        navigation.navigate('Pages2');
+      } else {
+        ToastAndroid.show('This feature being developed.', ToastAndroid.SHORT);
+      }
+    },
+    [navigation],
+  );
 
   return (
     <SafeAreaView style={styles.page}>
@@ -59,19 +70,14 @@ const Pages1 = () => {
             <View style={{flex: 3}}>
               <Button
                 text={'Get Started'}
-                onPress={() => console.log('Go to Page 2')}
+                onPress={() => buttonPress('start')}
               />
             </View>
 
             <View style={{flex: 0.7}}>
               <ButtonIcon
                 icon={'finder'}
-                onPress={() =>
-                  ToastAndroid.show(
-                    'This feature being developed.',
-                    ToastAndroid.SHORT,
-                  )
-                }
+                onPress={() => buttonPress('finder')}
                 disabled={false}
               />
             </View>
