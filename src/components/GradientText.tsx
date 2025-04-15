@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {memo} from 'react';
 import {View} from 'react-native';
 import Svg, {
   Defs,
@@ -32,4 +32,4 @@ const GradientText = ({text, fontSize = 30}: GradientText) => {
   );
 };
 
-export default GradientText;
+export default memo(GradientText);

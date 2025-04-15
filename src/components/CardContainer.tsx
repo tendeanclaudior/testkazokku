@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {memo} from 'react';
 import {Dimensions} from 'react-native';
 import {Gesture, GestureDetector} from 'react-native-gesture-handler';
 import {
@@ -120,4 +120,4 @@ const CardContainer = ({
   );
 };
 
-export default CardContainer;
+export default memo(CardContainer);

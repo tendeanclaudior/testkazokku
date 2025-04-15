@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {memo} from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
@@ -18,7 +18,7 @@ const Button = ({text, onPress}: Button) => {
   );
 };
 
-export default Button;
+export default memo(Button);
 
 const styles = StyleSheet.create({
   gradient: {

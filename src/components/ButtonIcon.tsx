@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unstable-nested-components */
-import React from 'react';
+import React, {memo} from 'react';
 import {StyleSheet, TouchableOpacity, View} from 'react-native';
 import {
   ViewfinderCircleIcon,
@@ -34,7 +34,7 @@ const ButtonIcon = ({icon, onPress, disabled}: ButtonIcon) => {
   );
 };
 
-export default ButtonIcon;
+export default memo(ButtonIcon);
 
 const styles = StyleSheet.create({
   FView: {
