@@ -22,3 +22,7 @@ declare interface ButtonIcon {
 declare interface Header {
   headerMain: boolean;
 }
+declare interface BalanceView {
+  currency: string;
+  daysView: boolean;
+}

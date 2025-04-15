@@ -1,13 +1,12 @@
+import React from 'react';
 import {
   SafeAreaView,
   ScrollView,
   StatusBar,
   StyleSheet,
-  Text,
   View,
 } from 'react-native';
-import React from 'react';
-import {Header} from '../../components';
+import {BalanceView, Header} from '../../components';
 
 const Pages2 = () => {
   return (
@@ -22,7 +21,7 @@ const Pages2 = () => {
 
       <ScrollView contentContainerStyle={styles.scrollContainer}>
         <View style={styles.container}>
-          <Text>Pages2</Text>
+          <BalanceView currency={'USD'} daysView={true} />
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -40,6 +39,7 @@ const styles = StyleSheet.create({
     flexGrow: 1,
   },
   container: {
-    padding: 20,
+    paddingHorizontal: 20,
+    paddingVertical: 10,
   },
 });
